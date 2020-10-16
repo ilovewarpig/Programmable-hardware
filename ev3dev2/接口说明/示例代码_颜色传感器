@@ -1,0 +1,32 @@
+颜色传感器
+
+def color_sensor_test():
+'''
+test basic founctions of ColorSensor
+'''
+cs = ColorSensor(INPUT_2)
+# 测试反射光强度
+debug_print('reflected light intensity: ', cs.reflected_light_intensity)
+# 测试环境光强度
+debug_print('ambient light intensity: ', cs.ambient_light_intensity)
+# 测试检测到的颜色
+debug_print('color: ', cs.color)
+# 测试检测到的颜色名字
+debug_print('color name: ', cs.color_name)
+# 返回监测到的颜色的三原色分量（250-400）
+debug_print('raw: ', cs.raw)
+# 返回检测到的颜色的三原色分量 (0-255)
+debug_print('rgb: ', cs.rgb)
+# 返回检测到的Lab色彩对立空间
+debug_print('lab: ', cs.lab)
+# 返回色调、饱和度和明度（hsv）
+debug_print('hsv: ', cs.hsv)
+# 返回色相、亮度和饱和度（hlv）
+debug_print('hls: ', cs.hls)
+# 返回检测到的颜色在红色的分量 （250-400）
+debug_print('red: ', cs.red)
+# 返回检测到的颜色在绿色的分量 （250-400）
+debug_print('green', cs.green)
+# 返回检测到的颜色在蓝色的分量 （250-400）
+debug_print('blue', cs.blue)
+
