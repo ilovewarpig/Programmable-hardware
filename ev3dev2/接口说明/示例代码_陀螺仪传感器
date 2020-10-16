@@ -1,0 +1,25 @@
+# 陀螺仪传感器
+
+def gyro_sensor_test():
+'''
+test basic founctions of GyroSensor
+'''
+gs = GyroSensor(INPUT_1)
+# 获取旋转角度
+debug_print('angle: ', gs.angle)
+# 获取旋转速率
+debug_print('rate: ', gs.rate)
+# 获取角度和速率
+debug_print('angle_and_rate: ', gs.angle_and_rate)
+# 获取倾斜角度
+debug_print('tilt_angle: ', gs.tilt_angle)
+# 获取倾斜速率
+debug_print('tilt_rate', gs.tilt_rate)
+# 重置
+GyroSensor.reset(gs)
+# 等待直到角度发生变化, 向负方向转动时输出- direction
+gs.wait_until_angle_changed_by(delta=-45, direction_sensitive=True)
+debug_print('- direction')
+# 等待直到角度发生变化，只要转动超过45度就输出转动
+gs.wait_until_angle_changed_by(delta=45, direction_sensitive=True)
+debug_print('转动')
