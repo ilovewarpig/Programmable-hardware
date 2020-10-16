@@ -1,0 +1,20 @@
+# 超声波传感器
+
+def ultrasonic_sensor_test():
+'''
+test basic founctions of UltrasonicSensor
+'''
+us = UltrasonicSensor(INPUT_1)
+# 持续测距 (cm)
+debug_print('distance_continuous_cm: ', us.distance_centimeters_continuous)
+# debug_print('distance_continuous_cm: ', us.distance_centimeters)
+# 单次测距 (cm)
+debug_print('distance_single_cm: ', us.distance_centimeters_ping)
+
+# 持续测距 (inch)
+debug_print('distance_continious_inch: ', us.distance_inches_continuous)
+# debug_print('distance_continuous_inch: ', us.distance_inches)
+# 单次测距 (inch)
+debug_print('distance_continious_inch: ', us.distance_inches_ping)
+# 检测周围超声波设备
+debug_print('other devices: ', us.other_sensor_present)
