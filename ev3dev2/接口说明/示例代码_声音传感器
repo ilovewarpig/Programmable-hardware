@@ -1,0 +1,12 @@
+# 声音传感器
+
+def sound_sensor_test():
+'''
+test basic founctions of SoundSensor
+'''
+ss = SoundSensor(INPUT_1)
+# 返回声音强度
+debug_print('sound_pressure', ss.sound_pressure)
+# 返回不高于55分贝的声音强度
+debug_print('sound_pressure_low', ss.sound_pressure_low)
+
