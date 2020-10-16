@@ -1,0 +1,29 @@
+电机最大速度的百分比
+每秒电机计数
+每秒旋转的圈数
+每分钟旋转的圈数
+每秒旋转的角度
+每分钟旋转的角度
+
+
+
+def speed_test():
+
+	lm1 = LargeMotor(OUTPUT_A)
+	lm2 = LargeMotor(OUTPUT_B)
+	mm = MediumMotor(OUTPUT_D)
+	
+	speed_percent = SpeedPercent(100)
+	debug_print('speed_percent: ', speed_percent.to_native_units(lm1))
+	
+	speed_native_units = SpeedNativeUnits(100)
+	debug_print('speed_native_units: ', speed_native_units.to_native_units(lm2))
+	
+	speed_rps = SpeedRPS(1)
+	debug_print('speed_rps: ', speed_rps.to_native_units(mm))
+	
+	speed_rpm = SpeedRPM(60)
+	debug_print('speed_rpm: ', speed_rpm.to_native_units(mm))
+	
+	speed_dps = SpeedDPS(360)
+	debug_print('speed_dps: ', speed_dps.to_native_units(lm1))
