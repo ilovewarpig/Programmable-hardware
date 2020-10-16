@@ -1,0 +1,12 @@
+# 光传感器
+
+
+def light_sensor_test():
+'''
+test basic founctions of LightSensor
+'''
+ls = LightSensor(INPUT_1)
+# 返回反射光强度
+debug_print('reflected_light_intensity: ', ls.reflected_light_intensity)
+# 返回环境光强度
+debug_print('ambient_light_intensity: ', ls.ambient_light_intensity)
