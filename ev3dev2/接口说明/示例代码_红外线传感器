@@ -1,0 +1,31 @@
+# 红外线传感器
+
+def test_infrared_sensor_process():
+	print('top_left pressed')
+
+def infrared_sensor_test():
+	'''
+	test basic founctions of InfraredSensor
+	'''
+	rs = InfraredSensor(INPUT_1)
+	# 测距
+	debug_print('proximity: ', rs.proximity)
+	# 测量传感器与发信器之间的距离
+	debug_print('distance: ', re.distance)
+# heading
+# heading and distance
+# 左上角按键是否被按下
+while True:
+	if rs.top_left():
+		print('top_left pressed')
+		break
+# 检测多个按键
+debug_print('multipal buttons detecting in 3 seconds')
+time.sleep(3)
+debug_print(rs.buttons_pressed)
+# 按下左上角按键时输出top_left_pressed
+rs.on_channel1_top_left = test_infrared_sensor_process
+while True:
+	rs.process()
+	time.sleep(1)
+	break
