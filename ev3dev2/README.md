@@ -10,7 +10,7 @@ ev3dev2库文件 https://github.com/ev3dev/ev3dev-lang-python
 1. 安装python https://www.python.org/downloads/windows/
 2. 安装ev3dev2包 
     python -m  pip install --upgrade pip
-    python -m  pip install --upgrade pip
+    pip install python-ev3dev2
 3. 安装visualstudio code https://code.visualstudio.com/
 4. 安装python、ev3dev2拓展插件(extension) 详见 https://github.com/ev3dev/vscode-hello-python
 5. 下载vscode-hello-python-master 详见 https://github.com/ev3dev/vscode-hello-python
